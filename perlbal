@@ -37,6 +37,10 @@ my $opt_daemonize;
 my $opt_config;
 my $opt_help;
 my $opt_version;
+
+# Rename binary in process list to make init scripts saner
+$0 = $_ = $0;
+
 usage(1) unless
     Getopt::Long::GetOptions(
                              'daemon'   => \$opt_daemonize,
